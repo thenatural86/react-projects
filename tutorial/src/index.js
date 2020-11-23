@@ -1,8 +1,36 @@
-import React from "react"
-import ReactDOM from "react-dom"
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-const Greeting = () => {
-  return <h4>Hello World</h4>
+const BookList = () => {
+  return (
+    <section>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
+  )
 }
 
-ReactDOM.render(<Greeting />, document.getElementById("root"))
+const Book = () => {
+  return (
+    <article>
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  )
+}
+
+const Image = () => (
+  <img
+    src='https://images-na.ssl-images-amazon.com/images/I/81h2gWPTYJL._AC_UL200_SR200,200_.jpg'
+    alt=''
+  />
+)
+
+const Title = () => <h1>Becoming Becoming</h1>
+const Author = () => <h4>Michele Obama</h4>
+
+ReactDOM.render(<BookList />, document.getElementById('root'))
