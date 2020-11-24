@@ -1,9 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import './index.css'
+
 const BookList = () => {
   return (
-    <section>
+    <section className='booklist'>
+      <Book />
+      <Book />
+      <Book />
       <Book />
       <Book />
       <Book />
@@ -15,7 +20,7 @@ const BookList = () => {
 
 const Book = () => {
   return (
-    <article>
+    <article className='book'>
       <Image />
       <Title />
       <Author />
@@ -30,7 +35,7 @@ const Image = () => (
   />
 )
 
-const Title = () => <h1>Becoming Becoming</h1>
+const Title = () => <h1>Becoming</h1>
 const Author = () => <h4>Michele Obama</h4>
 
 ReactDOM.render(<BookList />, document.getElementById('root'))
