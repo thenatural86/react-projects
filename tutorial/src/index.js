@@ -7,35 +7,23 @@ const BookList = () => {
   return (
     <section className='booklist'>
       <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
     </section>
   )
 }
 
 const Book = () => {
+  const title = 'Becoming'
+  const author = 'Michele Obama'
   return (
     <article className='book'>
-      <Image />
-      <Title />
-      <Author />
+      <img
+        src='https://images-na.ssl-images-amazon.com/images/I/81h2gWPTYJL._AC_UL200_SR200,200_.jpg'
+        alt=''
+      />
+      <h1>{title}</h1>
+      <h4>{author}</h4>
     </article>
   )
 }
-
-const Image = () => (
-  <img
-    src='https://images-na.ssl-images-amazon.com/images/I/81h2gWPTYJL._AC_UL200_SR200,200_.jpg'
-    alt=''
-  />
-)
-
-const Title = () => <h1>Becoming</h1>
-const Author = () => <h4>Michele Obama</h4>
 
 ReactDOM.render(<BookList />, document.getElementById('root'))
